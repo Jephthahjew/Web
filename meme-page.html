@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Memes page</title>
+  <link rel="stylesheet" href="Styles/style.css">
+  <script src="cdn_modules/jquery@3.7.1/jquery.js"></script>
+  <script src="cdn_modules/jquery@3.7.1/jquery.min.js"></script>
+  <style>
+    body {
+      color: #2B2C38
+    }
+
+    header {
+      color: goldenrod;
+
+    }
+
+    .back-icon {
+      height: 50px;
+      width: 50px;
+      border-radius: 50px;
+      border: gold 2px solid;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 10px;
+
+    }
+
+    main img {
+      border: 2px solid #ccc;
+    }
+
+    main section {
+      width: 98%;
+      text-align: left;
+      color: #2B2C38;
+      margin-top: 40px;
+
+    }
+
+    main section h1 {
+      width: 300px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      border-bottom: 2px solid deepskyblue;
+      border-left: 2px solid deepskyblue;
+    }
+
+    ul {
+      display: flex;
+      margin-top: 20px;
+      justify-content: center;
+      flex-direction: column;
+      height: 200px;
+      gap: 20px;
+
+    }
+
+    main ul li {
+      list-style-type: none;
+      font-weight: bold;
+    }
+
+    main ul li span {
+      font-weight: normal;
+    }
+
+    p {
+      width: 100%;
+      font-weight: normal;
+      display: block;
+      font-size: 15px;
+      display: flex;
+      margin-top: 30px;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+
+    }
+
+    .full-screen-image {
+      height: 100vh;
+      width: 100vh;
+      background-color: rgba(0, 0, .25);
+      z-index: 100000;
+      position: fixed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: -180%;
+    }
+
+    .img {
+      height: 340px;
+      width: 340px;
+      -webkit-background-size: 100% 100%;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+    }
+
+    button#download {
+      position: absolute;
+      transform: translateX(-46vw) translateY(10px);
+      background: none;
+      color: goldenrod;
+      border: 2px solid gold;
+      border-radius: 10px;
+      height: 40px;
+      width: 40px;
+      margin-left: 30px;
+      top: 0;
+
+    }
+
+    button#cancel {
+      position: absolute;
+      transform: translateX(46vw) translateY(10px);
+      background: none;
+      color: goldenrod;
+      border: 2px solid gold;
+      border-radius: 10px;
+      height: 40px;
+      width: 40px;
+      margin-left: -30px;
+      top: 0;
+
+    }
+
+    .other-contents {
+      height: 50px;
+      border: 2px solid deepskyblue;
+      border-radius: 10px;
+      width: 330px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    .other-contents button {
+      height: 40px;
+      width: 50px;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .display-add-fav {
+      width: 300px;
+      height: 50px;
+      background: #21B866;
+      position: fixed;
+      z-index: 100000;
+      margin-top: 100px;
+      border-radius: 10px;
+      display: none;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      color: #fff;
+      opacity: 0;
+      letter-spacing: 2px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+
+    <div class="back-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8" />
+      </svg>
+    </div>
+
+    <div class="logo">
+      <img src="images/L.png" alt="images/1.png">
+    </div>
+  </header>
+
+  <main>
+    <img src="" alt="Funny image" class="meme-img">
+    <section class="other-contents">
+      <button class="download">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+          <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+          <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"></path>
+        </svg>
+      </button>
+
+      <button class="favourite">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z" />
+        </svg>
+      </button>
+
+
+      <button class="share">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-share" viewBox="0 0 16 16">
+          <path d="M13.5 1a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3M11 2.5a2.5 2.5 0 1 1 .603 1.628l-6.718 3.12a2.5 2.5 0 0 1 0 1.504l6.718 3.12a2.5 2.5 0 1 1-.488.876l-6.718-3.12a2.5 2.5 0 1 1 0-3.256l6.718-3.12A2.5 2.5 0 0 1 11 2.5m-8.5 4a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3m11 5.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3" />
+        </svg>
+      </button>
+
+
+      <button class="report"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-flag" viewBox="0 0 16 16">
+          <path d="M14.778.085A.5.5 0 0 1 15 .5V8a.5.5 0 0 1-.314.464L14.5 8l.186.464-.003.001-.006.003-.023.009a12 12 0 0 1-.397.15c-.264.095-.631.223-1.047.35-.816.252-1.879.523-2.71.523-.847 0-1.548-.28-2.158-.525l-.028-.01C7.68 8.71 7.14 8.5 6.5 8.5c-.7 0-1.638.23-2.437.477A20 20 0 0 0 3 9.342V15.5a.5.5 0 0 1-1 0V.5a.5.5 0 0 1 1 0v.282c.226-.079.496-.17.79-.26C4.606.272 5.67 0 6.5 0c.84 0 1.524.277 2.121.519l.043.018C9.286.788 9.828 1 10.5 1c.7 0 1.638-.23 2.437-.477a20 20 0 0 0 1.349-.476l.019-.007.004-.002h.001M14 1.221c-.22.078-.48.167-.766.255-.81.252-1.872.523-2.734.523-.886 0-1.592-.286-2.203-.534l-.008-.003C7.662 1.21 7.139 1 6.5 1c-.669 0-1.606.229-2.415.478A21 21 0 0 0 3 1.845v6.433c.22-.078.48-.167.766-.255C4.576 7.77 5.638 7.5 6.5 7.5c.847 0 1.548.28 2.158.525l.028.01C9.32 8.29 9.86 8.5 10.5 8.5c.668 0 1.606-.229 2.415-.478A21 21 0 0 0 14 7.655V1.222z" />
+        </svg></button>
+    </section>
+    <section class="meme-details">
+      <h1>
+        Meme Details
+      </h1>
+
+      <ul>
+        <li>Author: <span> </span></li>
+        <li>Released: <span></span></li>
+        <li>Credits: <span></span></li>
+        <li>Category: <span></span></li>
+      </ul>
+    </section>
+
+    <section class="meme-description">
+      <h1>
+        Description
+      </h1>
+
+      <p>
+
+      </p>
+    </section>
+  </main>
+
+
+  <div class="full-screen-image">
+    <div class="img"></div>
+
+    <button role="button" id="download" class="download">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
+        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
+      </svg>
+    </button>
+
+    <button id="cancel">
+      X
+    </button>
+  </div>
+
+
+  <div class="display-add-fav">
+
+  </div>
+
+  <script src="Scripts/meme-page.js">
+
+  </script>
+  <script>
+    $(".full-screen-image").css("transition", "all .5s ease-in-out")
+    $(".meme-img").click(function() {
+      $(".full-screen-image").css("margin-top", 0)
+    })
+    $("#cancel").click(function() {
+
+      $(".full-screen-image").css("margin-top", "-180%")
+    });
+  </script>
+
+</body>
+
+</html>
